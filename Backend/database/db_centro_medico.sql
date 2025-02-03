@@ -1,6 +1,6 @@
-create database if not exists db_centro_medico_1;
+create database if not exists db_centro_medico_test;
 
-use db_centro_medico_1;
+use db_centro_medico_test;
 
 -- Crear la tabla de roles
 CREATE TABLE if not exists roles (
@@ -91,5 +91,4 @@ create table if not exists horario_profesional(
     foreign key (id_horario) references horarios(id_horario)
 );
 
-ALTER TABLE db_centro_medico_1.usuarios MODIFY COLUMN usuario_password VARCHAR(255);
 
