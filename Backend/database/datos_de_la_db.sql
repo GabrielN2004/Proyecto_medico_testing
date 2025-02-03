@@ -1,4 +1,4 @@
-use db_centro_medico_1;
+use db_centro_medico_test;
 
 INSERT INTO obrasociales (obrasocial_name) VALUES
 ('Particular'),
