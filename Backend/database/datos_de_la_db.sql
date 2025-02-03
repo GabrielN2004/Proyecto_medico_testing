@@ -19,6 +19,15 @@ INSERT INTO especialidades (especialidad_name) VALUES
 ('Pediatria'),
 ('Traumatologia');
 
+-- Insertar pacientes
+INSERT INTO Pacientes (dni_paciente, paciente_name, paciente_lastname, paciente_email, paciente_password, id_obrasocial)
+VALUES
+(12345678, 'Juan', 'Pérez', 'juan.perez@email.com', 'password123', 1),
+(23456789, 'Ana', 'Gómez', 'ana.gomez@email.com', 'password456', 2),
+(34567890, 'Carlos', 'López', 'carlos.lopez@email.com', 'password789', 1),
+(45678901, 'Maria', 'Fernández', 'maria.fernandez@email.com', 'password012', 3),
+(56789012, 'Luis', 'Martínez', 'luis.martinez@email.com', 'password345', 2);
+
 INSERT INTO profesionales (profesional_fullname, profesional_matricula, profesional_email, profesional_password, id_especialidad) VALUES
 ('Maria Solis', 1418, 'SolisMaria@gmail.com', 'Maria14185', 1),
 ('Juan Damonte', 2613, 'JuanDamonte@gmail.com', 'Juan2613', 1),
@@ -195,6 +204,17 @@ INSERT INTO usuarios (usuario_email, usuario_password, id_role) VALUES
 ('LucilaFerni@gmail.com', 'Lucila2847', 2),('AndreaRodriguez@gmail.com', 'Andrea2772', 2),('AdelaEspalter@gmail.com', 'Adela2022',2),
 ('SebastianSotta@gmail.com', 'Sebastian17829', 2),('FedericoCardone@gmail.com', 'Federico3554', 2),('SilvinaPereira@gmail.com', 'Silvina3251', 2),
 ('AgustoLavalle@gmail.com', 'Agusto2312', 2),('LuisBondi@gmail.com', 'Luis2475', 2),('ValeriaBlumetti@gmail.com', 'Valeria2412', 2),('GustavoSanchez@gmail.com', 'Gustavo2969', 2);
+
+-- Insertar usuarios con rol paciente
+INSERT INTO usuarios (usuario_email, usuario_password, id_role)
+VALUES
+('juan.perez@email.com', 'password123', 3),
+('ana.gomez@email.com', 'password456', 3),
+('carlos.lopez@email.com', 'password789', 3),
+('maria.fernandez@email.com', 'password012', 3),
+('luis.martinez@email.com', 'password345', 3);
+
+
 
 -- Ejemplo de insert de un token para el usuario admin (por ejemplo)
 INSERT INTO tokens (token, id_usuario) VALUES
