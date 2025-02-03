@@ -1,5 +1,6 @@
 import os
 from flask import Flask
+from config import *
 from dotenv import load_dotenv
 from flask_cors import CORS  # Importar CORS
 from app.database import DatabaseConnection
@@ -20,10 +21,18 @@ def create_app():
     # Habilitar CORS para todas las rutas (si necesitas configuraciones específicas, ajusta los parámetros)
     CORS(app, supports_credentials=True)
 
-    # Configurar la clave secreta para sesiones y JWT
-    app.config['SECRET_KEY'] = os.getenv('JWT_SECRET_KEY')
-    app.config['JWT_ALGORITHM'] = os.getenv('JWT_ALGORITHM')
+    # Load the configuration
+    env = os.getenv("FLASK_ENV", "development").lower()
+
+    app.logger.info("Running in %s environment", env)
+
+    class_Config ={
+        "Development": DevelopmentConfig,
+        "testing": TestingConfig,
+        "production": ProductionConfig,
+    }.get(env, DevelopmentConfig)
     
+    app.config.from_object(class_Config)
     # Conectar a la base de datos (esto puede ser llamado desde donde se necesite)
     DatabaseConnection.get_connection()
 
