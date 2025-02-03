@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/register.css">
+    <title>Registro</title>
+</head>
+<body>
+    <div class="register">
+        <form action="" id="registerForm">
+            <h1>Registro</h1>
+            <div class="input-box">
+                <label for="">Nombre</label>
+                <input type="text" id="paciente_name">
+            </div>
+            <div class="input-box">
+                <label for="">Apellido</label>
+                <input type="text" id="paciente_lastname">
+            </div>
+            <div class="input-box">
+                <label for="">DNI</label>
+                <input type="number" id="dni_paciente">
+            </div>
+            <div class="input-box">
+                <label for="">Email</label>
+                <input type="email" id="paciente_email">
+            </div>
+            <div class="input-box">
+                <label for="">Password</label>
+                <input type="password" id="paciente_password">
+            </div>
+            <div class="input-box">
+                <label for="">Obra Social</label>
+                <input type="number" id="id_obrasocial">
+            </div>
+            <button type="submit" class="btn">Registrarse</button>
+            <div class="iniciosesion-link">
+                <p>Ya tienes una cuenta? <a href="/templates/html/login.html">Iniciar Sesion</a></p>
+            </div>
+
+        </form>
+    </div>
+    <script src="https://kit.fontawesome.com/96ca335d68.js" crossorigin="anonymous"></script>
+    <script src="/templates/javascript/register.js"></script>
+</body>
+</html>

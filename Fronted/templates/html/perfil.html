@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="/static/css/perfil.css">
+</head>
+<body>
+    <div class="container-profile">
+        <div class="profile-header">
+            <img src="/static/img/perfil.png" alt="Foto de perfil" class="profile-img">
+            <h2>Perfil del Usuario</h2>
+        </div>
+
+        <div class="profile-info">
+            <h2>Información Personal</h2>
+            <form id="profile-form" action="/profile" method="POST">
+                <!-- Información común -->
+                <p>Correo electrónico</p>
+                <input class="input" type="email" id="email" name="email">
+
+                <p>Contraseña</p>
+                <input class="input" type="password" id="password" name="password">
+
+                <!-- Información para pacientes -->
+                <div id="paciente-fields">
+                    <p>DNI</p>
+                    <input class="input" type="number" id="dni_paciente" name="dni_paciente">
+                    <p>Nombre</p>
+                    <input class="input" type="text" id="paciente_name" name="paciente_name">
+                    <p>Apellido</p>
+                    <input class="input" type="text" id="paciente_lastname" name="paciente_lastname">
+                    <p>Obra Social</p>
+                    <select class="input" id="id_obrasocial" name="id_obrasocial">
+                        <option value="" disabled selected>Seleccione una obra social</option>
+                        <!-- Cargar las obras sociales disponibles -->
+                    </select>
+                </div>
+                
+                <!-- Información para profesionales -->
+                <div id="profesional-fields" style="display: none;">
+                    <p>Nombre Completo</p>
+                    <input class="input" type="text" id="profesional_fullname" name="profesional_fullname" required>
+
+                    <p>Matrícula</p>
+                    <input class="input" type="number" id="profesional_matricula" name="profesional_matricula" required>
+
+                    <p>Especialidad</p>
+                    <select class="input" id="id_especialidad" name="id_especialidad" required>
+                        <option value="" disabled selected>Seleccione una especialidad</option>
+                        <!-- Cargar las especialidades disponibles -->
+                    </select>
+
+                    <p>Obra Social</p>
+                    <select class="input" id="id_obrasocial_2" name="id_obrasocial" required>
+                        <option value="" disabled selected>Seleccione una obra social</option>
+                        <!-- Cargar las obras sociales disponibles -->
+                    </select>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="order-history">
+            <h2>Historial de Ordenes</h2>
+            <ul>
+                <li>Orden 1</li>
+                <li>Orden 2</li>
+                <li>Orden 3</li>
+            </ul>
+            <button class="btn-profile" type="submit">Guardar cambios</button>
+            <button class="trash-btn">Eliminar Cuenta</button>
+            <button class="Modi-btn">Modificar Información</button>
+            <button class="trash-btn">Cerrar Sesion</button>
+        </div>
+    </div>
+    <script src="/templates/javascript/perfil.js"></script>
+</body>
+</html>

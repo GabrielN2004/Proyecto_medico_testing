@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background: url(/static/img/medicina-sobre-fondo-azul-endecha-plana_23-2149341573.avif) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.container-profile {
+    display: flexbox;
+    width: 450px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.profile-header {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile-info,
+.order-history {
+    padding: 20px;
+    background-color: white;
+}
+
+.profile-info h2,
+.order-history h2 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.profile-info p,
+.order-history ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.profile-info form {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-info form p {
+    margin-bottom: 5px;
+}
+
+.profile-info form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.order-history ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.order-history ul li:last-child {
+    border-bottom: none;
+}
+
+.btn-profile {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-profile:hover {
+    background-color: #0056b3;
+}
+
+.trash-btn{
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.trash-btn:hover{
+    background-color: #0056b3;
+}
+
+.Modi-btn{
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.Modi-btn:hover{
+    background-color: #0056b3;
+}

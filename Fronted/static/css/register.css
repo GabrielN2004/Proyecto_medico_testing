@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:url(/static/img/medicina-sobre-fondo-azul-endecha-plana_23-2149341573.avif) no-repeat;
+    background-size: cover;
+    background-position:center;
+}
+.register{
+    width: 420px;
+    background-color:white;
+    border:2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.523);
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.register h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.register .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(66, 66, 66, 0.415);
+    border-radius: 40px;
+    font-size: 16px;
+    padding: 20px 45px 20px 20px;
+}
+
+.register .btn{
+    width: 100%;
+    height: 45px;
+    background-color: rgb(1, 112, 180);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0 0 0 .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.register .iniciosesion-link{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.iniciosesion-link p a{
+    color: rgb(1, 112, 180);
+    text-decoration: none;
+    font-weight: 600;
+}
+.iniciosesion-link p a:hover{
+    text-decoration: underline;
+}

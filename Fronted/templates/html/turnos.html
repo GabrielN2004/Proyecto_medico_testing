@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/turnos.css">
+    <title>Turnos</title>
+</head>
+<body>
+    <header>
+        <div class="container-hero">
+            <div class="container hero">
+                <div class="customer-support">
+                    <i class="fa-solid fa-headset"></i>
+                    <div class="content-customer-support">
+                        <span class="text">Soporte al cliente</span>
+                        <span class="number">123-456-7890</span>
+                    </div>
+                </div>
+
+                <div class="container-logo">
+                    <i class="fa-solid fa-stethoscope"></i>
+                    <h1 class="logo"><a href="/">CENTRO MEDICO INTEGRAL</a></h1>
+                </div>
+                <div class="container-user">
+                    <button id="login-btn"><i class="fa-solid fa-sign-in-alt"></i> Iniciar sesión</button>
+                    <div id="profile-icon" style="display: none;" onclick="goToProfilePage()">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-navbar">
+            <nav class="navbar container">
+                <i class="fa-solid fa-bars"></i>
+                <ul class="menu">
+                    <li><a href="/templates/html/index.html">Inicio</a></li>
+                    <li><a href="/templates/html/turnos.html">Turno</a></li>
+                    <li><a href="/templates/html/especialidades.html">Especialidades</a></li>
+                    <li><a href="/templates/html/somos.html">Somos</a></li>
+                    <li><a href="/templates/html/contacto.html">Contacto</a></li>
+                </ul>
+                <form class="search-form">
+                    <input type="search" placeholder="Buscar..." />
+                    <button class="btn-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="form" class="container-turno">
+            <h2 class="search-title">RESERVA DE TURNO</h2>
+            <form action="#" id="form-reserva" method="post" enctype="text/plain">
+                <div class="d-flex">
+                    <div class="form-control d-flex-column">
+                        <label for="dni">DNI:</label>
+                        <input type="number" class="input-search" id="dni_paciente" name="dni">
+                    </div>
+                    <div class="form-control d-flex-column">
+                        <label for="dni">Email:</label>
+                        <input type="text" class="input-search" id="usuario_email" name="email">
+                    </div>
+                    <div class="form-control d-flex-column">
+                        <label for="especialidades">Especialidades:</label>
+                        <select id="especialidades" name="especialidades" onchange="manejarCambioEspecialidades(event)">
+                            <option value="">Seleccione una especialidad</option>
+                        </select>
+                    </div>
+                    <div class="form-control d-flex-column">
+                        <label for="profesionales">Profesionales:</label>
+                        <select id="profesionales" name="profesionales" onchange="manejarCambioProfesionales(event)">
+                            <option value="">Seleccione un profesional</option>
+                        </select>
+                    </div>
+                    <div class="form-control d-flex-column">
+                        <label for="obrasociales">Obra Sociales:</label>
+                        <select id="obrasociales">
+                            <option value="">Seleccione una Obra Social</option>
+                        </select>
+                    </div>
+                    <div class="form-control d-flex-column">
+                        <label for="fecha_turno">Fecha de turno:</label>
+                        <input type="date" id="fecha_turno" name="fecha_llegada">
+                    </div>
+                    <div class="form-control d-flex-column">
+                        <label for="horarios">Horarios Disponibles:</label>
+                        <select id="horarios" name="horarios">
+                            <option value="">Seleccione un horario</option>
+                        </select>
+                    </div>
+                    <input type="hidden" name="id" id="id-turno">
+                    <button class="btn-cac" type="button" id="enviarTurno">Agregar Turno</button>
+                    <button class="btn-cac" type="reset">Borrar</button>
+                </div>
+            </form>
+        </section>                   
+        <section id="list" class="container">
+            <h3 class="subtitle">TURNOS PROGRAMADOS</h3>
+            <div class="field">
+                <label class="label">Buscar Turnos por DNI y Email</label>
+                <div class="control">
+                    <input id="dni_paciente_buscar" class="input" type="number" placeholder="Ingrese el DNI del paciente"><input id="email_paciente_buscar" class="input" type="email" placeholder="Ingrese el EMAIL del paciente"><button id="buscarTurno" class="button is-primary mt-2">Buscar Turnos</button>
+                </div>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>DNI</th>
+                        <th>Fecha de Turno</th>
+                        <th>Horarios</th>
+                        <th>Especialidades</th>
+                        <th>Profesionales</th>
+                        <th>Obra Social</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+            </table>
+            <table id="list-table-reservas" class="table-list">
+                <thead>
+                    <tr></tr>
+                </thead>
+                <tbody id="tbody-table-reservas">
+                    <!-- Aquí se llenarán dinámicamente las filas de reservas -->
+                </tbody>
+            </table>
+        </section>  
+    </main>
+    <footer>
+        <p>&copy; 2025 Centro Médico Vida Sana. Todos los derechos reservados.</p>
+    </footer>
+    <script src="/templates/javascript/turnos.js"></script>
+    <script src="https://kit.fontawesome.com/96ca335d68.js" crossorigin="anonymous"></script>
+</body>
+</html>
